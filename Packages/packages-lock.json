@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.jfcartier.collider-event-system": {
+      "version": "https://github.com/jfcmontmorency/collider-event-system.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.inputsystem": "1.19.0"
+      },
+      "hash": "fad135fb6e1c4270507325d0134ab8d3bb132cb6"
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.14",
       "depth": 0,
@@ -101,6 +110,7 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
     "com.unity.postprocessing": {
       "version": "3.5.4",
       "depth": 0,
@@ -108,6 +118,17 @@
       "dependencies": {
         "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.physics": "1.0.0"
+=======
+    "com.unity.probuilder": {
+      "version": "6.1.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.shadergraph": "17.0.3",
+        "com.unity.modules.imgui": "1.0.0",
+        "com.unity.modules.physics": "1.0.0",
+        "com.unity.settings-manager": "1.0.3"
+>>>>>>> da9976fd50d7634554995a5b91c046dff4599513
       },
       "url": "https://packages.unity.com"
     },
@@ -149,7 +170,7 @@
     },
     "com.unity.settings-manager": {
       "version": "2.1.1",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
