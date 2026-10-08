@@ -15,10 +15,10 @@ EditorBuildSettings:
     path: Assets/Scenes/FIN.unity
     guid: 239912d046a21b644adf02881b493638
   - enabled: 1
-    path: Assets/Scenes/scene_02-bar 1.unity
+    path: Assets/Scenes/scene_02-coffe-shop.unity
     guid: de51dee28a18a494886c8192a468b10b
   - enabled: 1
-    path: Assets/Scenes/scene_03-night_club.unity
+    path: Assets/Scenes/scene_03-casino.unity
     guid: aada96c0a512d14438276c751b998a8b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
