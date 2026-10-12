@@ -12,13 +12,19 @@ EditorBuildSettings:
     path: Assets/Scenes/accueil.unity
     guid: bacfcbd112ba468498fe45250a55eca4
   - enabled: 1
-    path: Assets/Scenes/FIN.unity
-    guid: 239912d046a21b644adf02881b493638
+    path: Assets/Scenes/scene_ville.unity
+    guid: 798e9bda3fc8af546aa1dc62e44548c3
   - enabled: 1
     path: Assets/Scenes/scene_ski.unity
     guid: de51dee28a18a494886c8192a468b10b
   - enabled: 1
     path: Assets/Scenes/scene_plage.unity
     guid: aada96c0a512d14438276c751b998a8b
+  - enabled: 1
+    path: Assets/Scenes/teste-controle-character.unity
+    guid: de3f171f400007549809d1a30caca417
+  - enabled: 1
+    path: Assets/Scenes/FIN.unity
+    guid: 239912d046a21b644adf02881b493638
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
