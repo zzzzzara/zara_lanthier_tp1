@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.jfcartier.collider-event-system": "https://github.com/jfcmontmorency/collider-event-system.git",
     "com.unity.ai.navigation": "2.0.14",
     "com.unity.cinemachine": "3.1.7",
     "com.unity.collab-proxy": "2.13.6",
@@ -11,6 +10,7 @@
     "com.unity.postprocessing": "3.5.4",
     "com.unity.probuilder": "6.1.2",
     "com.unity.render-pipelines.universal": "17.5.0",
+    "com.unity.shadergraph": "17.5.0",
     "com.unity.test-framework": "1.7.0",
     "com.unity.timeline": "1.8.12",
     "com.unity.ugui": "2.5.0",
