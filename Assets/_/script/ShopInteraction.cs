@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class ShopInteraction : MonoBehaviour
 {
+    [Header("Boutique")]
     [SerializeField] private GameObject shopButton;
     [SerializeField] private string sceneName;
 
@@ -11,7 +12,33 @@ public class ShopInteraction : MonoBehaviour
 
     void Start()
     {
-        shopButton.SetActive(false);
+        if (shopButton != null)
+        {
+            shopButton.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError(
+                "Le bouton de boutique n'est pas assigné dans l'Inspector !",
+                this
+            );
+        }
+    }
+
+    void Update()
+    {
+        if (shopButton == null)
+            return;
+
+        bool shouldShowButton =
+            playerNearby &&
+            ShoppingState.shoppingStarted &&
+            !ShoppingState.shopAlreadyChosen;
+
+        if (shopButton.activeSelf != shouldShowButton)
+        {
+            shopButton.SetActive(shouldShowButton);
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -19,12 +46,6 @@ public class ShopInteraction : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerNearby = true;
-
-            if (ShoppingState.shoppingStarted &&
-                !ShoppingState.shopAlreadyChosen)
-            {
-                shopButton.SetActive(true);
-            }
         }
     }
 
@@ -33,7 +54,6 @@ public class ShopInteraction : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerNearby = false;
-            shopButton.SetActive(false);
         }
     }
 
@@ -47,6 +67,12 @@ public class ShopInteraction : MonoBehaviour
 
         if (ShoppingState.shopAlreadyChosen)
             return;
+
+        if (string.IsNullOrWhiteSpace(sceneName))
+        {
+            Debug.LogError("Le nom de la scène n'est pas renseigné !");
+            return;
+        }
 
         ShoppingState.shopAlreadyChosen = true;
 

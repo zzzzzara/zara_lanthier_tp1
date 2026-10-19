@@ -953,7 +953,7 @@ GameObject:
   - component: {fileID: 192034889}
   - component: {fileID: 192034888}
   m_Layer: 5
-  m_Name: BouttonMagasiner
+  m_Name: Shop Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3471,6 +3471,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 768b420787e1b024e8b2bf19bc390972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  shopButton: {fileID: 192034886}
+  sceneName: scene_plage
 --- !u!4 &980917728
 Transform:
   m_ObjectHideFlags: 0
@@ -4672,7 +4674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1233355789
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7595,11 +7597,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1111075323}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -749, y: 502}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 87.25, y: -41}
   m_SizeDelta: {x: 247.5, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!1001 &2120694906
 PrefabInstance:
   m_ObjectHideFlags: 0

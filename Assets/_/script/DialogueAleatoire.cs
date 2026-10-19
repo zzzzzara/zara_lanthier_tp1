@@ -120,6 +120,7 @@ public class DialogueAleatoire : MonoBehaviour
 
         // Démarrer le chrono
         chronoEnCours = true;
+        ShoppingState.StartShopping();
         ActualiserChrono();
     }
 
