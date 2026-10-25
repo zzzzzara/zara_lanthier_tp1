@@ -11806,6 +11806,62 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5482d27bd654a86801d389fecb8f22a, type: 3}
+--- !u!1 &1543497615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1543497617}
+  - component: {fileID: 1543497616}
+  m_Layer: 0
+  m_Name: affiche
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1543497616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543497615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95bf3673b871db4781135f0a5acc07a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MorceauAffiche
+  selecteur: {fileID: 1518520670}
+  type: 2
+  icones:
+  - {fileID: 21300000, guid: 67e51a5a233666b41b925b37e0f8d916, type: 3}
+  - {fileID: 21300000, guid: 59321c028ddad0e45bba880e0941883a, type: 3}
+  - {fileID: 21300000, guid: 83219f7b2a8ef7847b5a4a0681ebdefe, type: 3}
+  - {fileID: 21300000, guid: 0b627eef7ae5f4b4b83ab3a594e795fa, type: 3}
+  - {fileID: 21300000, guid: c4e0679be65cd4a4faf9ffbd12e59c97, type: 3}
+  - {fileID: 21300000, guid: 258e85b31a56e1c4da1cd18bb69c4272, type: 3}
+  imageChandail: {fileID: 0}
+  imagePantalon: {fileID: 0}
+  imageAccessoire: {fileID: 0}
+--- !u!4 &1543497617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543497615}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1544854398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15161,7 +15217,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2068761244}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1543497616}
+        m_TargetAssemblyTypeName: MorceauAffiche, Assembly-CSharp
+        m_MethodName: Choisir
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2068761244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15571,6 +15639,7 @@ SceneRoots:
   - {fileID: 1843473099}
   - {fileID: 178734666}
   - {fileID: 1629746167}
+  - {fileID: 1543497617}
   - {fileID: 1057922056}
   - {fileID: 1033386434}
   - {fileID: 39987292}

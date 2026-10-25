@@ -894,6 +894,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 150336930}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &186886503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 186886504}
+  - component: {fileID: 186886505}
+  m_Layer: 0
+  m_Name: affiche
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &186886504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186886503}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 406.12067, y: -869.04224, z: 6772.7017}
+  m_LocalScale: {x: 0.9454015, y: 0.9454015, z: 0.9454015}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 402071544}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &186886505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186886503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95bf3673b871db4781135f0a5acc07a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MorceauAffiche
+  selecteur: {fileID: 469402062}
+  type: 0
+  icones:
+  - {fileID: 21300000, guid: c32247ed8af26704d8cb3cdfb99c1a1c, type: 3}
+  - {fileID: 21300000, guid: d9f4993d1bee83c489d86052b46bfa59, type: 3}
+  - {fileID: 21300000, guid: 56f89b4483f25d549bef95f11437d363, type: 3}
+  - {fileID: 21300000, guid: 15e98b4527aee8d4593290a2ae746a88, type: 3}
+  - {fileID: 21300000, guid: 8b5e014d27db5e54786c43d6887ce5bc, type: 3}
+  - {fileID: 21300000, guid: 78d93a53dc1b1014ba5c4e1785497492, type: 3}
+  imageChandail: {fileID: 0}
+  imagePantalon: {fileID: 0}
+  imageAccessoire: {fileID: 0}
 --- !u!1001 &193399942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1134,7 +1190,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: -1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1675,6 +1731,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1985604212}
+  - {fileID: 186886504}
   m_Father: {fileID: 1142673026}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
@@ -1726,9 +1783,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ConfirmCharacter, Assembly-CSharp
-        m_MethodName: SelectAndContinue
+      - m_Target: {fileID: 186886505}
+        m_TargetAssemblyTypeName: MorceauAffiche, Assembly-CSharp
+        m_MethodName: Choisir
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4986,7 +5043,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: -1
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

@@ -20,6 +20,13 @@ public class BoutonSelectionner : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        // Chrono fini pendant qu'on est dans la boutique : retour à la ville, qui gère la suite
+        if (DialogueAleatoire.ChronoFini)
+            SceneManager.LoadScene(nomSceneRetour);
+    }
+
     public void Selectionner()
     {
         if (selecteur == null)
@@ -31,6 +38,12 @@ public class BoutonSelectionner : MonoBehaviour
         // Stocker la catégorie de l'option affichée
         ChoixJoueur.categorieChoisie = selecteur.CategorieActuelle;
         ChoixJoueur.aFaitUnChoix = true;
+
+        if (ChoixJoueur.choix.Count < 3)
+            ChoixJoueur.choix.Add(selecteur.CategorieActuelle);
+
+        // Cette boutique ne pourra plus être utilisée
+        ChoixJoueur.boutiquesVisitees.Add(SceneManager.GetActiveScene().name);
 
         Debug.Log("Choix enregistré : " + ChoixJoueur.categorieChoisie);
 

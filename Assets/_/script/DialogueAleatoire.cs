@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 using System.Collections;
 
@@ -29,6 +30,10 @@ public class DialogueAleatoire : MonoBehaviour
     [Header("Résultat")]
     public TMP_Text texteResultat; // optionnel : affiche le verdict
 
+    [Header("Scènes")]
+    public string nomSceneEchec = "SceneEchec";
+    public string nomSceneProchainNiveau = "Niveau2";
+
     [Header("Souris")]
     [Tooltip("Garde la souris libre tant que le script est actif (utile si un autre script la re-verrouille).")]
     public bool forcerSourisLibre = true;
@@ -49,6 +54,11 @@ public class DialogueAleatoire : MonoBehaviour
     public static Categorie Destination
     {
         get { return categoriesDialogues[Mathf.Max(0, indexDestination)]; }
+    }
+
+    public static bool ChronoFini
+    {
+        get { return chronoDejaDemarre && Time.time >= tempsFinChrono; }
     }
 
     // Réinitialise l'état à chaque lancement du jeu (utile dans l'éditeur
@@ -106,15 +116,15 @@ public class DialogueAleatoire : MonoBehaviour
                 if (texteChrono != null)
                     texteChrono.text = "Temps écoulé !";
 
-                VerifierChoix();
+                TerminerNiveau();
             }
             else
             {
                 chronoEnCours = true;
                 ActualiserChrono();
 
-                // Si le joueur revient de la sélection, on vérifie son choix
-                if (ChoixJoueur.aFaitUnChoix)
+                // Le message s'affiche seulement quand les 3 morceaux sont choisis
+                if (ChoixJoueur.choix.Count >= 3)
                 {
                     VerifierChoix();
                 }
@@ -220,7 +230,7 @@ public class DialogueAleatoire : MonoBehaviour
             }
 
             Debug.Log("Le chrono est terminé !");
-            VerifierChoix();
+            TerminerNiveau();
             return;
         }
 
@@ -237,22 +247,28 @@ public class DialogueAleatoire : MonoBehaviour
         }
     }
 
+    bool TenueCorrecte()
+    {
+        if (ChoixJoueur.choix.Count < 3)
+            return false;
+
+        foreach (Categorie c in ChoixJoueur.choix)
+        {
+            if (c != Destination)
+                return false;
+        }
+        return true;
+    }
+
+    // Message affiché quand les 3 morceaux sont choisis
     void VerifierChoix()
     {
         string message;
 
-        if (!ChoixJoueur.aFaitUnChoix)
-        {
-            message = "Tu n'as rien choisi !";
-        }
-        else if (ChoixJoueur.categorieChoisie == Destination)
-        {
+        if (TenueCorrecte())
             message = "Bravo ! Tu as choisi la bonne tenue !";
-        }
         else
-        {
             message = "Oups, ce n'est pas la bonne tenue pour " + Destination + " !";
-        }
 
         Debug.Log(message);
 
@@ -260,6 +276,20 @@ public class DialogueAleatoire : MonoBehaviour
         {
             texteResultat.text = message;
         }
+    }
+
+    // Fin du chrono : échec ou niveau suivant
+    void TerminerNiveau()
+    {
+        bool reussi = TenueCorrecte();
+
+        Debug.Log(reussi ? "Tenue correcte : niveau suivant" : "Tenue incorrecte ou incomplète : échec");
+
+        // Remise à zéro pour le prochain niveau ou le prochain essai
+        ReinitialiserEtat();
+        ChoixJoueur.Reinitialiser();
+
+        SceneManager.LoadScene(reussi ? nomSceneProchainNiveau : nomSceneEchec);
     }
 
     void LibererSouris()

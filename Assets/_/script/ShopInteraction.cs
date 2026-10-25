@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -33,7 +32,7 @@ public class ShopInteraction : MonoBehaviour
         bool shouldShowButton =
             playerNearby &&
             ShoppingState.shoppingStarted &&
-            !ShoppingState.shopAlreadyChosen;
+            !ChoixJoueur.boutiquesVisitees.Contains(sceneName);
 
         if (shopButton.activeSelf != shouldShowButton)
         {
@@ -65,7 +64,7 @@ public class ShopInteraction : MonoBehaviour
         if (!ShoppingState.shoppingStarted)
             return;
 
-        if (ShoppingState.shopAlreadyChosen)
+        if (ChoixJoueur.boutiquesVisitees.Contains(sceneName))
             return;
 
         if (string.IsNullOrWhiteSpace(sceneName))
@@ -74,9 +73,6 @@ public class ShopInteraction : MonoBehaviour
             return;
         }
 
-        ShoppingState.shopAlreadyChosen = true;
-
         SceneManager.LoadScene(sceneName);
     }
 }
-

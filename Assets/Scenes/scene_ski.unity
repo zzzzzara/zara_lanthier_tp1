@@ -2297,6 +2297,7 @@ GameObject:
   - component: {fileID: 1897637627}
   - component: {fileID: 1897637626}
   - component: {fileID: 1897637625}
+  - component: {fileID: 1897637628}
   m_Layer: 0
   m_Name: "S\xE9lectionner"
   m_TagString: Untagged
@@ -2367,7 +2368,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1897637626}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1975208005}
+        m_TargetAssemblyTypeName: MorceauAffiche, Assembly-CSharp
+        m_MethodName: Choisir
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1897637626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2406,6 +2419,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897637623}
   m_CullTransparentMesh: 1
+--- !u!114 &1897637628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897637623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95bf3673b871db4781135f0a5acc07a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MorceauAffiche
+  selecteur: {fileID: 973471011}
+  type: 1
+  icones:
+  - {fileID: 21300000, guid: 02313b4b47547a64bb79dab2428a5e24, type: 3}
+  - {fileID: 21300000, guid: e6a1df03ef2f0354798e96c93a3de284, type: 3}
+  - {fileID: 21300000, guid: d2fbe031934ea3a43a62486fa0e858c9, type: 3}
+  - {fileID: 21300000, guid: 086ea0821d80c2e4483d208395df95bf, type: 3}
+  - {fileID: 21300000, guid: 7ba63b98b83231e4ab2840af336bf9e5, type: 3}
+  - {fileID: 21300000, guid: d2dc40a872473ed4aa872e6dcd47b542, type: 3}
+  imageChandail: {fileID: 0}
+  imagePantalon: {fileID: 0}
+  imageAccessoire: {fileID: 0}
 --- !u!1001 &1924889961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2463,6 +2500,62 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63faeb71197289c4aa49564bf348118e, type: 3}
+--- !u!1 &1975208004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1975208006}
+  - component: {fileID: 1975208005}
+  m_Layer: 0
+  m_Name: affiche
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1975208005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975208004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95bf3673b871db4781135f0a5acc07a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MorceauAffiche
+  selecteur: {fileID: 973471011}
+  type: 1
+  icones:
+  - {fileID: 21300000, guid: 02313b4b47547a64bb79dab2428a5e24, type: 3}
+  - {fileID: 21300000, guid: e6a1df03ef2f0354798e96c93a3de284, type: 3}
+  - {fileID: 21300000, guid: d2fbe031934ea3a43a62486fa0e858c9, type: 3}
+  - {fileID: 21300000, guid: 086ea0821d80c2e4483d208395df95bf, type: 3}
+  - {fileID: 21300000, guid: 7ba63b98b83231e4ab2840af336bf9e5, type: 3}
+  - {fileID: 21300000, guid: d2dc40a872473ed4aa872e6dcd47b542, type: 3}
+  imageChandail: {fileID: 0}
+  imagePantalon: {fileID: 0}
+  imageAccessoire: {fileID: 0}
+--- !u!4 &1975208006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975208004}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 103.75665, y: -0, z: 7757.777}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2044543111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2707,3 +2800,4 @@ SceneRoots:
   - {fileID: 1603692371}
   - {fileID: 990550805}
   - {fileID: 1189179365}
+  - {fileID: 1975208006}
