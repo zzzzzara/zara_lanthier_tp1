@@ -5,15 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/scene_01-terrasse.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/accueil.unity
     guid: bacfcbd112ba468498fe45250a55eca4
-  - enabled: 1
-    path: Assets/Scenes/accueil_niveau2.unity
-    guid: 21648969ccc3dd14e98189a91ecec1c8
   - enabled: 1
     path: Assets/Scenes/scene_ville.unity
     guid: 798e9bda3fc8af546aa1dc62e44548c3
@@ -26,9 +20,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/scene_plage.unity
     guid: aada96c0a512d14438276c751b998a8b
-  - enabled: 0
-    path: Assets/Scenes/teste-controle-character.unity
-    guid: de3f171f400007549809d1a30caca417
+  - enabled: 1
+    path: Assets/Scenes/accueil_niveau2.unity
+    guid: 21648969ccc3dd14e98189a91ecec1c8
+  - enabled: 1
+    path: Assets/Scenes/scene_ville_niveau2.unity
+    guid: 72099c29b631d0a40b92f0206d312830
+  - enabled: 1
+    path: Assets/Scenes/scene_boulangerie.unity
+    guid: 7b6e334216f55ad4b9b4068fd44ab789
+  - enabled: 1
+    path: Assets/Scenes/scene_cadeau.unity
+    guid: deea17796cb11c5459fafb10a859acdd
   - enabled: 1
     path: Assets/Scenes/FIN.unity
     guid: 239912d046a21b644adf02881b493638
