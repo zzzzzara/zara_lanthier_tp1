@@ -20,15 +20,16 @@ public class DialogueAleatoire : MonoBehaviour
     [Header("Vitesse du texte")]
     public float delaiEntreMots = 0.4f;
 
-    [Header("Bouton")]
+    [Header("Boutons")]
     public Button boutonDemarrer;
+    public Button boutonVerifier; // NOUVEAU : apparaît quand les 3 morceaux sont choisis
 
     [Header("Chronomètre")]
     public TMP_Text texteChrono;
     public float dureeChrono = 60f;
 
     [Header("Résultat")]
-    public TMP_Text texteResultat; // optionnel : affiche le verdict
+    public TMP_Text texteResultat; // optionnel
 
     [Header("Scènes")]
     public string nomSceneEchec = "SceneEchec";
@@ -82,12 +83,20 @@ public class DialogueAleatoire : MonoBehaviour
 
         LibererSouris();
 
-        // Cacher le bouton au début
+        // Cacher le bouton de démarrage au début
         if (boutonDemarrer != null)
         {
             boutonDemarrer.gameObject.SetActive(false);
             boutonDemarrer.onClick.RemoveListener(DemarrerChrono);
             boutonDemarrer.onClick.AddListener(DemarrerChrono);
+        }
+
+        // NOUVEAU : cacher le bouton de vérification et brancher le clic
+        if (boutonVerifier != null)
+        {
+            boutonVerifier.gameObject.SetActive(false);
+            boutonVerifier.onClick.RemoveListener(VerifierEtTerminer);
+            boutonVerifier.onClick.AddListener(VerifierEtTerminer);
         }
 
         if (texteChrono != null)
@@ -100,7 +109,7 @@ public class DialogueAleatoire : MonoBehaviour
             texteResultat.text = "";
         }
 
-        // --- Retour sur la scène : pas de dialogue ni de bouton, le chrono continue ---
+        // --- Retour sur la scène : pas de dialogue ni de bouton démarrer, le chrono continue ---
         if (chronoDejaDemarre)
         {
             if (texteDialogue != null)
@@ -123,11 +132,8 @@ public class DialogueAleatoire : MonoBehaviour
                 chronoEnCours = true;
                 ActualiserChrono();
 
-                // Le message s'affiche seulement quand les 3 morceaux sont choisis
-                if (ChoixJoueur.choix.Count >= 3)
-                {
-                    VerifierChoix();
-                }
+                // Le bouton Vérifier apparaît si les 3 morceaux sont déjà choisis
+                ActualiserBoutonVerifier();
             }
 
             return;
@@ -215,6 +221,9 @@ public class DialogueAleatoire : MonoBehaviour
         if (!chronoEnCours)
             return;
 
+        // NOUVEAU : afficher le bouton Vérifier dès que 3 morceaux sont choisis
+        ActualiserBoutonVerifier();
+
         // Calculé à partir de l'heure de fin : reste exact même après un changement de scène
         tempsRestant = tempsFinChrono - Time.time;
 
@@ -247,6 +256,29 @@ public class DialogueAleatoire : MonoBehaviour
         }
     }
 
+    // NOUVEAU : affiche le bouton seulement quand les 3 morceaux sont choisis
+    void ActualiserBoutonVerifier()
+    {
+        if (boutonVerifier == null)
+            return;
+
+        bool troisChoisis = ChoixJoueur.choix.Count >= 3;
+
+        if (boutonVerifier.gameObject.activeSelf != troisChoisis)
+            boutonVerifier.gameObject.SetActive(troisChoisis);
+    }
+
+    // NOUVEAU : clic sur "Vérifier" -> réussite = niveau suivant, sinon échec
+    public void VerifierEtTerminer()
+    {
+        if (chronoTermine)
+            return;
+
+        chronoEnCours = false;
+        chronoTermine = true;
+        TerminerNiveau();
+    }
+
     bool TenueCorrecte()
     {
         if (ChoixJoueur.choix.Count < 3)
@@ -260,30 +292,14 @@ public class DialogueAleatoire : MonoBehaviour
         return true;
     }
 
-    // Message affiché quand les 3 morceaux sont choisis
-    void VerifierChoix()
-    {
-        string message;
-
-        if (TenueCorrecte())
-            message = "Bravo ! Tu as choisi la bonne tenue !";
-        else
-            message = "Oups, ce n'est pas la bonne tenue pour " + Destination + " !";
-
-        Debug.Log(message);
-
-        if (texteResultat != null)
-        {
-            texteResultat.text = message;
-        }
-    }
-
-    // Fin du chrono : échec ou niveau suivant
+    // Vérification finale : échec ou niveau suivant
     void TerminerNiveau()
     {
         bool reussi = TenueCorrecte();
 
-        Debug.Log(reussi ? "Tenue correcte : niveau suivant" : "Tenue incorrecte ou incomplète : échec");
+        Debug.Log(reussi
+            ? "Tenue correcte : niveau suivant"
+            : "Tenue incorrecte ou incomplète pour l'activité " + Destination + " : échec");
 
         // Remise à zéro pour le prochain niveau ou le prochain essai
         ReinitialiserEtat();
