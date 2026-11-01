@@ -7405,6 +7405,62 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d487ae7b96684219968000585734a19, type: 3}
+--- !u!1 &1416645672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1416645674}
+  - component: {fileID: 1416645673}
+  m_Layer: 0
+  m_Name: affiche
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1416645673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416645672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95bf3673b871db4781135f0a5acc07a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MorceauAffiche
+  selecteur: {fileID: 1351597743}
+  type: 0
+  icones:
+  - {fileID: 21300000, guid: beb45f915cae2fe4eaf8a1ef638e7cb4, type: 3}
+  - {fileID: 21300000, guid: 5d811216825ddce4c9df34e415650e88, type: 3}
+  - {fileID: 21300000, guid: dfc0de6ff8830ca4cafa2cc02a845101, type: 3}
+  - {fileID: 21300000, guid: 19a6319eed8c4ef449e94901604b06cf, type: 3}
+  - {fileID: 21300000, guid: 7ac966ee8e16b1046ba2f80db2e7f160, type: 3}
+  - {fileID: 21300000, guid: cbdc9fa8f03d4f54a9b7476a8e922c4f, type: 3}
+  imageChandail: {fileID: 0}
+  imagePantalon: {fileID: 0}
+  imageAccessoire: {fileID: 0}
+--- !u!4 &1416645674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416645672}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.28567168, z: -0, w: 0.9583276}
+  m_LocalPosition: {x: 765, y: -401, z: 748}
+  m_LocalScale: {x: 734.4132, y: 734.4131, z: 734.4132}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1468284012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10563,6 +10619,7 @@ SceneRoots:
   - {fileID: 656855626}
   - {fileID: 228081281}
   - {fileID: 380456860}
+  - {fileID: 1416645674}
   - {fileID: 940608441}
   - {fileID: 1360215044}
   - {fileID: 1093494181}
