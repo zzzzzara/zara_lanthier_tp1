@@ -12,9 +12,9 @@ public class DialogueAleatoire : MonoBehaviour
     [TextArea(2, 4)]
     public string[] dialogues = new string[3]
     {
-        "L'aventure en forêt approche ! Prépare ton équipement avant la fin du chrono et n'oublie pas d'aller magasiner à la boutique de camping pour acheter tout ce qu'il te faut !",
-        "Une journée à la plage t'attend ! Prépare-toi avant que le chrono arrive à zéro et passe à la boutique de plage pour acheter tout le nécessaire !",
-        "Direction les montagnes enneigées ! Tu dois te préparer avant la fin du chrono. Va magasiner à la boutique de ski pour être prêt à dévaler les pistes !"
+        "L'aventure en forêt approche ! Prépare ton équipement avant la fin du chrono pour l'activité de camping!",
+        "Une journée à la plage t'attend ! Prépare-toi avant que le chrono arrive à zéro!",
+        "Direction les montagnes enneigées ! Tu dois te préparer avant la fin du chrono pour aller au ski!"
     };
 
     [Header("Vitesse du texte")]
