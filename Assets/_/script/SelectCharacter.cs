@@ -42,6 +42,7 @@ public class SelectCharacter : MonoBehaviour
     void Start()
     {
         LibererSouris();
+        AfficherSeulement(Number);
     }
 
     // LateUpdate s'exécute après les Update() des autres scripts,
@@ -60,12 +61,28 @@ public class SelectCharacter : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
-    public void ChangeCharacter(int Num)
+    // Désactive tous les éléments, puis active uniquement celui demandé
+    void AfficherSeulement(int index)
     {
+        if (Characters == null || Characters.Length == 0) return;
+
+        // Sécurise l'index de départ (au cas où Number serait invalide dans l'Inspector)
+        if (index < 0 || index >= Characters.Length)
+        {
+            index = 0;
+            Number = 0;
+        }
+
         for (int i = 0; i < Characters.Length; i++)
         {
-            Characters[i].SetActive(false);
+            if (Characters[i] != null)
+                Characters[i].SetActive(i == index);
         }
+    }
+
+    public void ChangeCharacter(int Num)
+    {
+        if (Characters == null || Characters.Length == 0) return;
 
         Number += Num;
 
@@ -79,7 +96,7 @@ public class SelectCharacter : MonoBehaviour
             Number = Characters.Length - 1;
         }
 
-        Characters[Number].SetActive(true);
+        AfficherSeulement(Number);
 
         Debug.Log("Option " + Number + " : " + CategorieActuelle);
     }
