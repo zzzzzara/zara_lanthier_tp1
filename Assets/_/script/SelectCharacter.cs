@@ -2,9 +2,8 @@ using UnityEngine;
 
 public enum Categorie
 {
-    Plage,
-    Camping,
-    Ski
+    Camping, Plage, Ski,
+    Tarte, Foret, Muffin, Etoile, Beigne, Plante
 }
 
 public class SelectCharacter : MonoBehaviour
