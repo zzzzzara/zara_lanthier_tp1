@@ -8637,7 +8637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorceauAffiche
   selecteur: {fileID: 0}
-  type: 0
+  type: 2
   icones:
   - {fileID: 21300000, guid: c32247ed8af26704d8cb3cdfb99c1a1c, type: 3}
   - {fileID: 21300000, guid: d9f4993d1bee83c489d86052b46bfa59, type: 3}

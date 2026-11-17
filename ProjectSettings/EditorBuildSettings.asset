@@ -27,14 +27,29 @@ EditorBuildSettings:
     path: Assets/Scenes/scene_ville_niveau2.unity
     guid: 72099c29b631d0a40b92f0206d312830
   - enabled: 1
-    path: Assets/Scenes/scene_boulangerie.unity
-    guid: 7b6e334216f55ad4b9b4068fd44ab789
-  - enabled: 1
     path: Assets/Scenes/scene_cadeau.unity
     guid: deea17796cb11c5459fafb10a859acdd
   - enabled: 1
+    path: Assets/Scenes/scene_boulangerie.unity
+    guid: 7b6e334216f55ad4b9b4068fd44ab789
+  - enabled: 1
     path: Assets/Scenes/accueil_niveau3.unity
     guid: 2ab1a146458382a4f8bbe596574dadf7
+  - enabled: 1
+    path: Assets/Scenes/ville_niveau3.unity
+    guid: a03efbb20932f8043917d54de02bc0dd
+  - enabled: 1
+    path: Assets/Scenes/magasin_couvert.unity
+    guid: a00f06f72474a9a46bf5ab04e8f20ffd
+  - enabled: 1
+    path: Assets/Scenes/magasin_cuisine.unity
+    guid: 0dc0281d2fde7be4786debdc0c158d17
+  - enabled: 1
+    path: Assets/Scenes/magasin_deco.unity
+    guid: bd3d829e903384b4782355fc9651e7f8
+  - enabled: 1
+    path: Assets/Scenes/magasin_Meubles.unity
+    guid: 81cfcc56895cdf4459a3f0c028c32795
   - enabled: 1
     path: Assets/Scenes/FIN.unity
     guid: 239912d046a21b644adf02881b493638

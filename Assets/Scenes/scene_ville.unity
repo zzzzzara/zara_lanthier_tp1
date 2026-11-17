@@ -478,6 +478,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 873a92953f85f46ff828089ce0e82b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.TransformAction
+  targetMode: 1
+  target: {fileID: 0}
+  modifyPosition: 0
+  position: {x: 0, y: 0, z: 0}
+  modifyRotation: 0
+  rotation: {x: 0, y: 0, z: 0}
+  modifyScale: 0
+  scale: {x: 1, y: 1, z: 1}
+  valueMode: 0
+  valueSource: 0
+  valueReference: {fileID: 0}
+  space: 0
+  cancelPhysicsWhileMoving: 1
+  animate: 0
+  duration: 1
+  ease: 0
+  customCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &64409945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -769,6 +809,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 275f95c71dc6d4da5b0b56be350fa878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.GameObjectAction
+  targetMode: 1
+  target: {fileID: 0}
+  operation: 1
 --- !u!114 &69915528
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -781,6 +824,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 275f95c71dc6d4da5b0b56be350fa878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.GameObjectAction
+  targetMode: 1
+  target: {fileID: 0}
+  operation: 1
 --- !u!1001 &78825432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1118,6 +1164,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2539c1a705247439d369eeb7e6769c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.SceneAction
+  operation: 0
+  sceneAsset: {fileID: 102900000, guid: aada96c0a512d14438276c751b998a8b, type: 3}
+  scenePath: Assets/Scenes/scene_plage.unity
+  additive: 0
 --- !u!1 &172520665
 GameObject:
   m_ObjectHideFlags: 0
@@ -2441,6 +2491,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2539c1a705247439d369eeb7e6769c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.SceneAction
+  operation: 0
+  sceneAsset: {fileID: 102900000, guid: de51dee28a18a494886c8192a468b10b, type: 3}
+  scenePath: Assets/Scenes/scene_ski.unity
+  additive: 0
 --- !u!1001 &314018424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4882,6 +4936,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 275f95c71dc6d4da5b0b56be350fa878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.GameObjectAction
+  targetMode: 1
+  target: {fileID: 0}
+  operation: 1
 --- !u!114 &960223548
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4894,6 +4951,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 275f95c71dc6d4da5b0b56be350fa878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.GameObjectAction
+  targetMode: 1
+  target: {fileID: 0}
+  operation: 1
 --- !u!1001 &969407553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8935,6 +8995,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2539c1a705247439d369eeb7e6769c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.SceneAction
+  operation: 0
+  sceneAsset: {fileID: 102900000, guid: 94a405c3b68d2ff49acab3cdbde68cca, type: 3}
+  scenePath: Assets/Scenes/scene_camping.unity
+  additive: 0
 --- !u!1001 &1790574480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10664,6 +10728,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 275f95c71dc6d4da5b0b56be350fa878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.GameObjectAction
+  targetMode: 1
+  target: {fileID: 0}
+  operation: 1
 --- !u!114 &2121667054
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -10676,6 +10743,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 275f95c71dc6d4da5b0b56be350fa878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.GameObjectAction
+  targetMode: 1
+  target: {fileID: 0}
+  operation: 1
 --- !u!1001 &2138975078
 PrefabInstance:
   m_ObjectHideFlags: 0

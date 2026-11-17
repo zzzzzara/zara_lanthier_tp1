@@ -1181,6 +1181,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7248225253176770852, guid: 11baf85d76fc07e47ab0be87f9bdd1e9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 362957354}
+    - targetCorrespondingSourceObject: {fileID: 7248225253176770852, guid: 11baf85d76fc07e47ab0be87f9bdd1e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 362957355}
   m_SourcePrefab: {fileID: 100100000, guid: 11baf85d76fc07e47ab0be87f9bdd1e9, type: 3}
 --- !u!1 &362957349 stripped
 GameObject:
@@ -1201,6 +1204,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FloatingEffect
   speed: 2
   height: 0.11
+--- !u!114 &362957355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362957349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b7d6c8a7a0a6b47aa4938952c7ef08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AchatObjet
+  prix: 100
+  categorie: Cuisine
+  budgetUI: {fileID: 1266188993}
+  boutonAcheter: {fileID: 1529733075}
 --- !u!1001 &374251074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1329,6 +1348,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1089298806083518, guid: a0634ab2a98bd4b78af017c116badda5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 376303656}
+    - targetCorrespondingSourceObject: {fileID: 1089298806083518, guid: a0634ab2a98bd4b78af017c116badda5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 376303657}
   m_SourcePrefab: {fileID: 100100000, guid: a0634ab2a98bd4b78af017c116badda5, type: 3}
 --- !u!1 &376303654 stripped
 GameObject:
@@ -1349,6 +1371,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FloatingEffect
   speed: 2
   height: 0.11
+--- !u!114 &376303657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376303654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b7d6c8a7a0a6b47aa4938952c7ef08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AchatObjet
+  prix: 90
+  categorie: Cuisine
+  budgetUI: {fileID: 1266188993}
+  boutonAcheter: {fileID: 1529733075}
 --- !u!1001 &413229250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1534,6 +1572,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1655709482802634, guid: 4269506dcb6ad41a8a58a18ed8af1cdd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 452486994}
+    - targetCorrespondingSourceObject: {fileID: 1655709482802634, guid: 4269506dcb6ad41a8a58a18ed8af1cdd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 452486995}
   m_SourcePrefab: {fileID: 100100000, guid: 4269506dcb6ad41a8a58a18ed8af1cdd, type: 3}
 --- !u!1 &452486990 stripped
 GameObject:
@@ -1554,6 +1595,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FloatingEffect
   speed: 2
   height: 0.11
+--- !u!114 &452486995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452486990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b7d6c8a7a0a6b47aa4938952c7ef08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AchatObjet
+  prix: 100
+  categorie: Cuisine
+  budgetUI: {fileID: 1266188993}
+  boutonAcheter: {fileID: 1529733075}
 --- !u!1001 &468218240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1697,6 +1754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84bd633aa7533db47961a74ef700bf71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  texteBudget: {fileID: 0}
 --- !u!4 &516085338
 Transform:
   m_ObjectHideFlags: 0
@@ -2589,6 +2647,53 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80278570906458d499abd6aa3ef03fc3, type: 3}
+--- !u!1 &942352790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 942352792}
+  - component: {fileID: 942352791}
+  m_Layer: 0
+  m_Name: BoutonSelectionner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &942352791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942352790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f532718c48a3ee444b44fbc326c3420d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  selecteur: {fileID: 1278838227}
+  bouton: {fileID: 1529733075}
+  nomSceneRetour: ville_niveau3
+--- !u!4 &942352792
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942352790}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 665.20404, y: 11.83351, z: 651.3249}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &949891076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3159,6 +3264,143 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70ffc489c79a14a4caf59aa6cb7d74c2, type: 3}
+--- !u!1 &1261637925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1261637926}
+  - component: {fileID: 1261637928}
+  - component: {fileID: 1261637927}
+  m_Layer: 5
+  m_Name: text budget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1261637926
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261637925}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1266188992}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -72, y: -69}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &1261637927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261637925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'budget: 300$'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -21.248573, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1261637928
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261637925}
+  m_CullTransparentMesh: 1
 --- !u!1 &1266188987
 GameObject:
   m_ObjectHideFlags: 0
@@ -3172,6 +3414,7 @@ GameObject:
   - component: {fileID: 1266188990}
   - component: {fileID: 1266188989}
   - component: {fileID: 1266188988}
+  - component: {fileID: 1266188993}
   m_Layer: 5
   m_Name: Canvas (1)
   m_TagString: Untagged
@@ -3273,6 +3516,7 @@ RectTransform:
   - {fileID: 1389609154}
   - {fileID: 1529733074}
   - {fileID: 1399542681}
+  - {fileID: 1261637926}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3280,6 +3524,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1266188993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266188987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84bd633aa7533db47961a74ef700bf71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BudgetUI
+  texteBudget: {fileID: 1261637927}
 --- !u!1 &1278838226
 GameObject:
   m_ObjectHideFlags: 0
@@ -3594,6 +3851,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1607743324859160, guid: 55c9aefe9fe274201bea0c3d22de1acc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1315550399}
+    - targetCorrespondingSourceObject: {fileID: 1607743324859160, guid: 55c9aefe9fe274201bea0c3d22de1acc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1315550400}
   m_SourcePrefab: {fileID: 100100000, guid: 55c9aefe9fe274201bea0c3d22de1acc, type: 3}
 --- !u!1 &1315550393 stripped
 GameObject:
@@ -3614,6 +3874,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FloatingEffect
   speed: 2
   height: 0.11
+--- !u!114 &1315550400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315550393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b7d6c8a7a0a6b47aa4938952c7ef08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AchatObjet
+  prix: 65
+  categorie: Cuisine
+  budgetUI: {fileID: 1266188993}
+  boutonAcheter: {fileID: 1529733075}
 --- !u!1001 &1322464864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5264,6 +5540,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1284846768158662, guid: 2bb858b872f0f4fb89e1d1263c276480, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1904449786}
+    - targetCorrespondingSourceObject: {fileID: 1284846768158662, guid: 2bb858b872f0f4fb89e1d1263c276480, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1904449787}
   m_SourcePrefab: {fileID: 100100000, guid: 2bb858b872f0f4fb89e1d1263c276480, type: 3}
 --- !u!1 &1904449784 stripped
 GameObject:
@@ -5284,6 +5563,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FloatingEffect
   speed: 2
   height: 0.11
+--- !u!114 &1904449787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904449784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b7d6c8a7a0a6b47aa4938952c7ef08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AchatObjet
+  prix: 200
+  categorie: Cuisine
+  budgetUI: {fileID: 1266188993}
+  boutonAcheter: {fileID: 1529733075}
 --- !u!1001 &1976017931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5583,6 +5878,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1203558832422810, guid: bbfd91b99086b4acb9d41d225cf41bb2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2076478352}
+    - targetCorrespondingSourceObject: {fileID: 1203558832422810, guid: bbfd91b99086b4acb9d41d225cf41bb2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2076478353}
   m_SourcePrefab: {fileID: 100100000, guid: bbfd91b99086b4acb9d41d225cf41bb2, type: 3}
 --- !u!1 &2076478347 stripped
 GameObject:
@@ -5603,6 +5901,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FloatingEffect
   speed: 2
   height: 0.11
+--- !u!114 &2076478353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076478347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b7d6c8a7a0a6b47aa4938952c7ef08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AchatObjet
+  prix: 50
+  categorie: Cuisine
+  budgetUI: {fileID: 1266188993}
+  boutonAcheter: {fileID: 1529733075}
 --- !u!1001 &2082746186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5837,6 +6151,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 104125817}
   - {fileID: 1885109143}
+  - {fileID: 942352792}
   - {fileID: 1278838228}
   - {fileID: 842010514}
   - {fileID: 516085338}
