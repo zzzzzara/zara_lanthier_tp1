@@ -22,7 +22,7 @@ public class DialogueAleatoire : MonoBehaviour
 
     [Header("Boutons")]
     public Button boutonDemarrer;
-    public Button boutonVerifier; // NOUVEAU : apparaît quand les 3 morceaux sont choisis
+    public Button boutonVerifier; // apparaît quand les 3 morceaux sont choisis
 
     [Header("Chronomètre")]
     public TMP_Text texteChrono;
@@ -91,7 +91,7 @@ public class DialogueAleatoire : MonoBehaviour
             boutonDemarrer.onClick.AddListener(DemarrerChrono);
         }
 
-        // NOUVEAU : cacher le bouton de vérification et brancher le clic
+        // Cacher le bouton de vérification et brancher le clic
         if (boutonVerifier != null)
         {
             boutonVerifier.gameObject.SetActive(false);
@@ -221,7 +221,7 @@ public class DialogueAleatoire : MonoBehaviour
         if (!chronoEnCours)
             return;
 
-        // NOUVEAU : afficher le bouton Vérifier dès que 3 morceaux sont choisis
+        // Afficher le bouton Vérifier dès que 3 morceaux sont choisis
         ActualiserBoutonVerifier();
 
         // Calculé à partir de l'heure de fin : reste exact même après un changement de scène
@@ -256,7 +256,7 @@ public class DialogueAleatoire : MonoBehaviour
         }
     }
 
-    // NOUVEAU : affiche le bouton seulement quand les 3 morceaux sont choisis
+    // Affiche le bouton seulement quand les 3 morceaux sont choisis
     void ActualiserBoutonVerifier()
     {
         if (boutonVerifier == null)
@@ -268,7 +268,7 @@ public class DialogueAleatoire : MonoBehaviour
             boutonVerifier.gameObject.SetActive(troisChoisis);
     }
 
-    // NOUVEAU : clic sur "Vérifier" -> réussite = niveau suivant, sinon échec
+    // Clic sur "Vérifier" -> réussite = niveau suivant, sinon échec
     public void VerifierEtTerminer()
     {
         if (chronoTermine)
@@ -296,6 +296,14 @@ public class DialogueAleatoire : MonoBehaviour
     void TerminerNiveau()
     {
         bool reussi = TenueCorrecte();
+
+        // ---- LOG DE DIAGNOSTIC ----
+        string contenu = "";
+        foreach (Categorie c in ChoixJoueur.choix)
+            contenu += c + " ";
+        Debug.Log("Destination : " + Destination +
+                  " | Choix (" + ChoixJoueur.choix.Count + ") : " + contenu);
+        // ---------------------------
 
         Debug.Log(reussi
             ? "Tenue correcte : niveau suivant"

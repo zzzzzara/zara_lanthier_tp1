@@ -100,12 +100,14 @@ public class SelectCharacter : MonoBehaviour
         Debug.Log("Option " + Number + " : " + CategorieActuelle);
     }
 
-    // Vérifie que les deux tableaux ont la même taille
+    // Avertit si les deux tableaux n'ont pas la même taille (sans rien modifier)
     void OnValidate()
     {
         if (Characters != null && categories != null && categories.Length != Characters.Length)
         {
-            System.Array.Resize(ref categories, Characters.Length);
+            Debug.LogWarning(
+                "SelectCharacter : " + Characters.Length + " objets mais " +
+                categories.Length + " catégories. Corrige la liste Categories !", this);
         }
     }
 }
