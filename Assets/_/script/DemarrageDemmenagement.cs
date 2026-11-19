@@ -1,11 +1,15 @@
-
 using UnityEngine;
 
 public class DemarrageDemmenagement : MonoBehaviour
 {
-    void Start()
+    void Awake()
     {
-        ShoppingState.InitialiserBudget(300);
-        ShoppingState.StartShopping();
+        if (!ShoppingState.shoppingStarted)
+        {
+            ShoppingState.InitialiserBudget(300);
+            ShoppingState.StartShopping();
+        }
+
+        Debug.Log("Budget actuel : " + ShoppingState.budgetRestant);
     }
 }
