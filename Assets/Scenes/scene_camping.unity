@@ -504,6 +504,8 @@ MonoBehaviour:
   imageChandail: {fileID: 0}
   imagePantalon: {fileID: 0}
   imageAccessoire: {fileID: 0}
+  imageCadeau: {fileID: 0}
+  imageDessert: {fileID: 0}
 --- !u!1001 &193399942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2379,7 +2381,6 @@ GameObject:
   - component: {fileID: 1142673025}
   - component: {fileID: 1142673024}
   - component: {fileID: 1142673023}
-  - component: {fileID: 1142673022}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2387,18 +2388,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1142673022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1142673021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9454d07b6e8929f468bb822e30a1b90f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Timer
 --- !u!114 &1142673023
 MonoBehaviour:
   m_ObjectHideFlags: 0

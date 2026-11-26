@@ -251,7 +251,6 @@ GameObject:
   - component: {fileID: 306261260}
   - component: {fileID: 306261259}
   - component: {fileID: 306261258}
-  - component: {fileID: 306261262}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -345,20 +344,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &306261262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 306261257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9454d07b6e8929f468bb822e30a1b90f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Timer
-  timerText: {fileID: 0}
-  remainingTime: 90
 --- !u!1 &310465798 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3605869103271255009, guid: aa90f0e8a59f422498258172f25bcca8, type: 3}
@@ -2375,7 +2360,7 @@ MonoBehaviour:
   - {fileID: 670496120}
   - {fileID: 1420710397}
   - {fileID: 1182324081}
-  categories: 010000000000000001000000020000000000000002000000
+  categories: 010000000000000002000000010000000000000002000000
   Number: 0
   forcerSourisLibre: 1
 --- !u!1 &1543497615
@@ -2419,6 +2404,8 @@ MonoBehaviour:
   imageChandail: {fileID: 0}
   imagePantalon: {fileID: 0}
   imageAccessoire: {fileID: 0}
+  imageCadeau: {fileID: 0}
+  imageDessert: {fileID: 0}
 --- !u!4 &1543497617
 Transform:
   m_ObjectHideFlags: 0

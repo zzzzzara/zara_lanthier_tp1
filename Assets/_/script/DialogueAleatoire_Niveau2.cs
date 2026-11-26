@@ -282,8 +282,10 @@ public class DialogueAleatoire_Niveau2 : MonoBehaviour
             ? "Bons objets choisis : niveau suivant"
             : "Objets incorrects ou incomplets : échec");
 
+        // Remise à zéro pour le prochain niveau ou le prochain essai
         ReinitialiserEtat();
         ChoixJoueur.Reinitialiser();
+        MorceauAffiche.Vider();
 
         SceneManager.LoadScene(reussi ? nomSceneProchainNiveau : nomSceneEchec);
     }

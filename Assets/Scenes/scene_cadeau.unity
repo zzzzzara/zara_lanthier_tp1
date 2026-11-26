@@ -8175,7 +8175,6 @@ GameObject:
   - component: {fileID: 1862586816}
   - component: {fileID: 1862586815}
   - component: {fileID: 1862586814}
-  - component: {fileID: 1862586813}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -8183,20 +8182,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1862586813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862586812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9454d07b6e8929f468bb822e30a1b90f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Timer
-  timerText: {fileID: 0}
-  remainingTime: 90
 --- !u!114 &1862586814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8510,6 +8495,8 @@ MonoBehaviour:
   imageChandail: {fileID: 0}
   imagePantalon: {fileID: 0}
   imageAccessoire: {fileID: 0}
+  imageCadeau: {fileID: 0}
+  imageDessert: {fileID: 0}
 --- !u!1 &1918419446
 GameObject:
   m_ObjectHideFlags: 0
@@ -8540,7 +8527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorceauAffiche
   selecteur: {fileID: 2019017796}
-  type: 1
+  type: 3
   icones:
   - {fileID: 21300000, guid: 7f1cf3960159b4144a799287329a5baa, type: 3}
   - {fileID: 21300000, guid: 67fb9903d2d252641bacc95c51b9599e, type: 3}
@@ -8551,6 +8538,8 @@ MonoBehaviour:
   imageChandail: {fileID: 0}
   imagePantalon: {fileID: 0}
   imageAccessoire: {fileID: 0}
+  imageCadeau: {fileID: 0}
+  imageDessert: {fileID: 0}
 --- !u!4 &1918419448
 Transform:
   m_ObjectHideFlags: 0

@@ -9238,6 +9238,8 @@ MonoBehaviour:
   imageChandail: {fileID: 1297511347}
   imagePantalon: {fileID: 1467927955}
   imageAccessoire: {fileID: 1297511347}
+  imageCadeau: {fileID: 0}
+  imageDessert: {fileID: 0}
 --- !u!1 &1788369786
 GameObject:
   m_ObjectHideFlags: 0

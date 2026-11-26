@@ -40,9 +40,9 @@ public class DialogueAleatoire : MonoBehaviour
     public bool forcerSourisLibre = true; // nom conservé pour ne pas perdre la valeur dans l'Inspector
 
     // ---------- ÉTAT PERSISTANT ENTRE LES SCÈNES ----------
-    private static bool chronoDejaDemarre = false; // le joueur a déjà cliqué sur le bouton
-    private static float tempsFinChrono = 0f;      // moment (Time.time) où le chrono se termine
-    private static int indexDestination = -1;      // -1 = pas encore tirée
+    private static bool chronoDejaDemarre = false;
+    private static float tempsFinChrono = 0f;
+    private static int indexDestination = -1;
 
     // Même ordre que le tableau "dialogues"
     private static readonly Categorie[] categoriesDialogues =
@@ -62,8 +62,6 @@ public class DialogueAleatoire : MonoBehaviour
         get { return chronoDejaDemarre && Time.time >= tempsFinChrono; }
     }
 
-    // Réinitialise l'état à chaque lancement du jeu (utile dans l'éditeur
-    // si le "Domain Reload" est désactivé)
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     static void ReinitialiserEtat()
     {
@@ -81,7 +79,6 @@ public class DialogueAleatoire : MonoBehaviour
     {
         tempsRestant = dureeChrono;
 
-        // Cacher le bouton de démarrage au début
         if (boutonDemarrer != null)
         {
             boutonDemarrer.gameObject.SetActive(false);
@@ -89,7 +86,6 @@ public class DialogueAleatoire : MonoBehaviour
             boutonDemarrer.onClick.AddListener(DemarrerChrono);
         }
 
-        // Cacher le bouton de vérification et brancher le clic
         if (boutonVerifier != null)
         {
             boutonVerifier.gameObject.SetActive(false);
@@ -98,14 +94,10 @@ public class DialogueAleatoire : MonoBehaviour
         }
 
         if (texteChrono != null)
-        {
             texteChrono.text = "";
-        }
 
         if (texteResultat != null)
-        {
             texteResultat.text = "";
-        }
 
         // --- Retour sur la scène : pas de dialogue ni de bouton démarrer, le chrono continue ---
         if (chronoDejaDemarre)
@@ -130,8 +122,6 @@ public class DialogueAleatoire : MonoBehaviour
             {
                 chronoEnCours = true;
                 ActualiserChrono();
-
-                // Le bouton Vérifier apparaît si les 3 morceaux sont déjà choisis
                 ActualiserBoutonVerifier();
             }
 
@@ -154,7 +144,6 @@ public class DialogueAleatoire : MonoBehaviour
             return;
         }
 
-        // On ne tire qu'une seule fois : la destination reste la même au retour sur la scène
         if (indexDestination < 0)
         {
             indexDestination = Random.Range(0, dialogues.Length);
@@ -180,9 +169,7 @@ public class DialogueAleatoire : MonoBehaviour
         LibererSouris();
 
         if (boutonDemarrer != null)
-        {
             boutonDemarrer.gameObject.SetActive(true);
-        }
     }
 
     public void DemarrerChrono()
@@ -193,16 +180,11 @@ public class DialogueAleatoire : MonoBehaviour
         Debug.Log("Bouton cliqué : démarrage du chrono !");
 
         if (texteDialogue != null)
-        {
             texteDialogue.text = "";
-        }
 
         if (boutonDemarrer != null)
-        {
             boutonDemarrer.gameObject.SetActive(false);
-        }
 
-        // Mémoriser le démarrage pour les prochaines visites de la scène
         chronoDejaDemarre = true;
         tempsFinChrono = Time.time + dureeChrono;
 
@@ -217,17 +199,13 @@ public class DialogueAleatoire : MonoBehaviour
     void Update()
     {
         if (forcerSourisLibre)
-        {
             ActualiserSouris();
-        }
 
         if (!chronoEnCours)
             return;
 
-        // Afficher le bouton Vérifier dès que 3 morceaux sont choisis
         ActualiserBoutonVerifier();
 
-        // Calculé à partir de l'heure de fin : reste exact même après un changement de scène
         tempsRestant = tempsFinChrono - Time.time;
 
         if (tempsRestant <= 0f)
@@ -237,9 +215,7 @@ public class DialogueAleatoire : MonoBehaviour
             chronoTermine = true;
 
             if (texteChrono != null)
-            {
                 texteChrono.text = "Temps écoulé !";
-            }
 
             Debug.Log("Le chrono est terminé !");
             TerminerNiveau();
@@ -315,6 +291,7 @@ public class DialogueAleatoire : MonoBehaviour
         // Remise à zéro pour le prochain niveau ou le prochain essai
         ReinitialiserEtat();
         ChoixJoueur.Reinitialiser();
+        MorceauAffiche.Vider();
 
         SceneManager.LoadScene(reussi ? nomSceneProchainNiveau : nomSceneEchec);
     }

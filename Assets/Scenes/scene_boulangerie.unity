@@ -4374,7 +4374,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1184587126}
-  - {fileID: 1130490905}
   m_Father: {fileID: 1349898125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
@@ -5832,11 +5831,11 @@ Transform:
   m_GameObject: {fileID: 1130490904}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 41.76196, y: -45.33221, z: 2114.3652}
-  m_LocalScale: {x: 1.1337029, y: 1.1337029, z: 1.1337029}
+  m_LocalPosition: {x: 603.1627, y: -0.000030517578, z: 1898.7504}
+  m_LocalScale: {x: 1.0187129, y: 1.0187129, z: 1.0187129}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 946652066}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1130490906
 MonoBehaviour:
@@ -5851,7 +5850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorceauAffiche
   selecteur: {fileID: 1351597743}
-  type: 0
+  type: 4
   icones:
   - {fileID: 21300000, guid: beb45f915cae2fe4eaf8a1ef638e7cb4, type: 3}
   - {fileID: 21300000, guid: 5d811216825ddce4c9df34e415650e88, type: 3}
@@ -5862,6 +5861,8 @@ MonoBehaviour:
   imageChandail: {fileID: 0}
   imagePantalon: {fileID: 0}
   imageAccessoire: {fileID: 0}
+  imageCadeau: {fileID: 0}
+  imageDessert: {fileID: 0}
 --- !u!1001 &1133704781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7324,7 +7325,6 @@ GameObject:
   - component: {fileID: 1349898124}
   - component: {fileID: 1349898123}
   - component: {fileID: 1349898122}
-  - component: {fileID: 1349898121}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -7332,20 +7332,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1349898121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349898120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9454d07b6e8929f468bb822e30a1b90f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Timer
-  timerText: {fileID: 0}
-  remainingTime: 90
 --- !u!114 &1349898122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10983,6 +10969,7 @@ SceneRoots:
   - {fileID: 656855626}
   - {fileID: 228081281}
   - {fileID: 380456860}
+  - {fileID: 1130490905}
   - {fileID: 1757106629}
   - {fileID: 1349898125}
   - {fileID: 940608441}
