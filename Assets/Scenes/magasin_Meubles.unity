@@ -947,11 +947,11 @@ Transform:
   m_GameObject: {fileID: 302359519}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 41.76196, y: -45.33221, z: 2114.3652}
-  m_LocalScale: {x: 1.1337029, y: 1.1337029, z: 1.1337029}
+  m_LocalPosition: {x: 563.23, y: 0.000030517578, z: 1789.1926}
+  m_LocalScale: {x: 0.9599332, y: 0.9599332, z: 0.9599332}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 918818366}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &302359521
 MonoBehaviour:
@@ -965,7 +965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95bf3673b871db4781135f0a5acc07a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorceauAffiche
-  selecteur: {fileID: 0}
+  selecteur: {fileID: 773252189}
   type: 0
   icones:
   - {fileID: 21300000, guid: beb45f915cae2fe4eaf8a1ef638e7cb4, type: 3}
@@ -977,6 +977,8 @@ MonoBehaviour:
   imageChandail: {fileID: 0}
   imagePantalon: {fileID: 0}
   imageAccessoire: {fileID: 0}
+  imageCadeau: {fileID: 0}
+  imageDessert: {fileID: 0}
 --- !u!1001 &308359175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3326,7 +3328,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 907738844}
-  - {fileID: 302359520}
   m_Father: {fileID: 1985925154}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
@@ -7232,10 +7233,11 @@ SceneRoots:
   - {fileID: 756518269}
   - {fileID: 723017}
   - {fileID: 1371789365}
-  - {fileID: 1985925154}
+  - {fileID: 302359520}
   - {fileID: 681747011}
   - {fileID: 721415296}
   - {fileID: 773252190}
+  - {fileID: 1985925154}
   - {fileID: 846472173}
   - {fileID: 1324711968}
   - {fileID: 1301919438}

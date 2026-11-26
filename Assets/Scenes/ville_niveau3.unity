@@ -10767,7 +10767,7 @@ MonoBehaviour:
   panneauChrono: {fileID: 0}
   texteChrono: {fileID: 1991641031}
   dureeChrono: 100
-  boutonVerifier: {fileID: 2113582507}
+  boutonVerifier: {fileID: 2075465882}
   nomSceneReussite: FIN
   nomSceneEchec: "\xC9CHEC"
   toucheCurseur: 308
@@ -13688,54 +13688,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6974bfebd354b4d4abbfc516d68a2774, type: 3}
---- !u!1 &1884311183
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1884311185}
-  - component: {fileID: 1884311184}
-  m_Layer: 0
-  m_Name: cout objets
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1884311184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884311183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58b7d6c8a7a0a6b47aa4938952c7ef08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  prix: 0
-  categorie: 
-  budgetUI: {fileID: 0}
-  boutonAcheter: {fileID: 0}
---- !u!4 &1884311185
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884311183}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 938.19586, y: 0, z: 3143.899}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1891515375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15926,7 +15878,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 58234747}
   - {fileID: 566912667}
-  - {fileID: 1884311185}
   - {fileID: 1360287739}
   - {fileID: 2075465077}
   - {fileID: 969798778}

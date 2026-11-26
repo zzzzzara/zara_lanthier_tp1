@@ -1123,7 +1123,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 27.3, y: 0}
+  m_AnchoredPosition: {x: 31, y: -3}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &240285629
@@ -1148,8 +1148,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Acheter
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3c6d84c52caee7f42a1a2c612bf846b2, type: 2}
+  m_sharedMaterial: {fileID: 8618563708534695498, guid: 3c6d84c52caee7f42a1a2c612bf846b2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4795,7 +4795,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1904326408}
+      - m_Target: {fileID: 1918419447}
         m_TargetAssemblyTypeName: MorceauAffiche, Assembly-CSharp
         m_MethodName: Choisir
         m_Mode: 1
@@ -8483,7 +8483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95bf3673b871db4781135f0a5acc07a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorceauAffiche
-  selecteur: {fileID: 0}
+  selecteur: {fileID: 2019017796}
   type: 2
   icones:
   - {fileID: 21300000, guid: c32247ed8af26704d8cb3cdfb99c1a1c, type: 3}
