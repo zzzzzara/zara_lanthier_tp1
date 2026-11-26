@@ -35,6 +35,8 @@ public class BoutonSelectionner : MonoBehaviour
             return;
         }
 
+        //ShoppingState.Acheter(12);
+
         // Stocker la catégorie de l'option affichée
         ChoixJoueur.categorieChoisie = selecteur.CategorieActuelle;
         ChoixJoueur.aFaitUnChoix = true;

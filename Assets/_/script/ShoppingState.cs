@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public static class ShoppingState
 {
@@ -32,6 +33,7 @@ public static class ShoppingState
         if (budgetRestant >= prix)
         {
             budgetRestant -= prix;
+            Console.WriteLine("Achat effectué. Budget restant : " + budgetRestant);
             return true;
         }
 

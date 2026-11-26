@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Cash
   m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.IntVariable
   m_Id: b79a072a8f404ae4b80d5cdf6fe62eb6
-  Persistent: 0
-  m_InitialValue: 0
+  Persistent: 1
+  m_InitialValue: 300
