@@ -36,8 +36,8 @@ public class DialogueAleatoire : MonoBehaviour
     public string nomSceneProchainNiveau = "Niveau2";
 
     [Header("Souris")]
-    [Tooltip("Garde la souris libre tant que le script est actif (utile si un autre script la re-verrouille).")]
-    public bool forcerSourisLibre = true;
+    [Tooltip("Si activé, ce script gère la souris : libre quand un bouton est affiché, verrouillée pendant le jeu.")]
+    public bool forcerSourisLibre = true; // nom conservé pour ne pas perdre la valeur dans l'Inspector
 
     // ---------- ÉTAT PERSISTANT ENTRE LES SCÈNES ----------
     private static bool chronoDejaDemarre = false; // le joueur a déjà cliqué sur le bouton
@@ -80,8 +80,6 @@ public class DialogueAleatoire : MonoBehaviour
     void Start()
     {
         tempsRestant = dureeChrono;
-
-        LibererSouris();
 
         // Cacher le bouton de démarrage au début
         if (boutonDemarrer != null)
@@ -126,6 +124,7 @@ public class DialogueAleatoire : MonoBehaviour
                     texteChrono.text = "Temps écoulé !";
 
                 TerminerNiveau();
+                return;
             }
             else
             {
@@ -136,10 +135,13 @@ public class DialogueAleatoire : MonoBehaviour
                 ActualiserBoutonVerifier();
             }
 
+            ActualiserSouris();
             return;
         }
 
         // --- Première visite : comportement normal ---
+        LibererSouris();
+
         if (texteDialogue == null)
         {
             Debug.LogError("Le texte du dialogue n'est pas assigné !");
@@ -190,8 +192,6 @@ public class DialogueAleatoire : MonoBehaviour
 
         Debug.Log("Bouton cliqué : démarrage du chrono !");
 
-        LibererSouris();
-
         if (texteDialogue != null)
         {
             texteDialogue.text = "";
@@ -209,13 +209,16 @@ public class DialogueAleatoire : MonoBehaviour
         chronoEnCours = true;
         ShoppingState.StartShopping();
         ActualiserChrono();
+
+        // Le bouton est caché : la souris se verrouille pour jouer
+        ActualiserSouris();
     }
 
     void Update()
     {
         if (forcerSourisLibre)
         {
-            LibererSouris();
+            ActualiserSouris();
         }
 
         if (!chronoEnCours)
@@ -316,9 +319,32 @@ public class DialogueAleatoire : MonoBehaviour
         SceneManager.LoadScene(reussi ? nomSceneProchainNiveau : nomSceneEchec);
     }
 
+    // ---------- GESTION DE LA SOURIS ----------
     void LibererSouris()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
+
+    void VerrouillerSouris()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    // Souris libre si le chrono ne tourne pas ou si un bouton est affiché,
+    // verrouillée le reste du temps pour pouvoir jouer
+    void ActualiserSouris()
+    {
+        bool boutonDemarrerVisible = boutonDemarrer != null && boutonDemarrer.gameObject.activeSelf;
+        bool boutonVerifierVisible = boutonVerifier != null && boutonVerifier.gameObject.activeSelf;
+
+        bool besoinSouris = !chronoEnCours || boutonDemarrerVisible || boutonVerifierVisible;
+
+        if (besoinSouris)
+            LibererSouris();
+        else
+            VerrouillerSouris();
+    }
+    // ------------------------------------------
 }
